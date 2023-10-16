@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+     h1 { color: white; }
+     label { color: white;}
+     input { color: white;}
+.centered-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+<div class="centered-div" align="center">
+    <h1 >Envoyer une vidéo</h1><br>
+
+    {{ form_start(form) }}<br>
+    {{ form_label(form.video) }}<br><br>
+        {{ form_widget(form.video) }}<br><br><br>
+
+        <button type="submit">Envoyer</button>
+    {{ form_end(form) }}
+    </div>
+{% endblock %}
